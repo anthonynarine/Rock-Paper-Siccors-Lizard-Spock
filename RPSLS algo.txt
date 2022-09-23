@@ -1,0 +1,41 @@
+
+RPSLS (Rock, Paper, Scissors, Lizard, Spock) Game steps.
+
+1. Display welcome message.
+
+2. Display the game rules.
+	Scissors > Paper and Lizard
+	Paper > Rock and Spock
+	Rock > Scissors and Lizard
+	Spock > Rock and Scissors
+	Lizard > Paper and Spock
+	        
+	Rock < Paper and Spock
+	Paper < Scissors and Lizard
+	Scissors < Rock and Spock
+	Spock < Paper and Spock
+	Lizard < Rock and Scissors
+
+
+3. Ask the user to select the amount of players.
+	1 player will be Ai vs human
+	2 players ?
+	3 players ?
+
+4. Display game options to user (Rock, Paper, Scissors, Lizard, Spock).
+5. Obtain user option
+6. accomodate a tie option
+7. Run and incriment round 1
+8. Repeat steps 4-7 until a player or computer get to 3 wins. 
+
+9. display The winner
+
+10. Repeat game.   
+
+	
+
+	
+
+
+
+
