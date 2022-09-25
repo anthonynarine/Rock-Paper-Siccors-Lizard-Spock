@@ -1,9 +1,8 @@
+from random import randint
 
 class Player:
-    #this will be the parent class for computer and human
     def __init__(self):
-        self.gesture = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
-        self.socre = 0
-        self.tie = 0
-
-
+        self.gesture_option = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
+        self.current_gesture = 0
+      
+    
