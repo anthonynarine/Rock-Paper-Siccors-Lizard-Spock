@@ -7,6 +7,7 @@ class Human(Player):
         self.name = name
 
     def choose_gesture(self):
+        print("#######################################")
         self.current_gesture = int(input (f"Select your weapon of choice {self.name}:\n[1] for Rock.\n[2] for Paper.\n[3] for Scissors.\n[4] for lizard.\n[5] for spock. \n"))      
         if self.current_gesture == 1:
             print (f"You have selected {self.gesture_option[0]}")

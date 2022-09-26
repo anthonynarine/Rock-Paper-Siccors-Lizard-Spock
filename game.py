@@ -1,8 +1,7 @@
-from telnetlib import GA
-from player import Player
+
+
 from human import Human
 from computer import Computer
-import time
 import random
 
 
@@ -43,6 +42,8 @@ class Game:
             self.computer = Computer()
             
     def battle(self):
+        while True:
+            
             self.player_one.choose_gesture()
             self.computer.choose_gesture()
 
@@ -50,42 +51,55 @@ class Game:
                 print ("Its a tie, next round")
 
             elif self.player_one.current_gesture == 1 and self.computer.current_gesture == 3 or self.computer.choose_gesture == 4:
+                print("#" * 20)
                 print (f"{self.player_one.name} has won this round.")
+                print("#" * 20)
                 self.player_one.score += 1
-
 
             elif self.player_one.current_gesture == 2 and self.computer.current_gesture == 1 or self.computer.choose_gesture == 5:
+                print("#" * 20)
                 print (f"{self.player_one.name} has won this round.")
-                self.player_one.score += 1 
-
-
-            elif self.player_one.current_gesture == 3 and self.computer.current_gesture == 2 or self.computer.choose_gesture == 4:
-                print (f"{self.player_one.name} has won this round.")
+                print("#" * 20)
                 self.player_one.score += 1
 
+            elif self.player_one.current_gesture == 3 and self.computer.current_gesture == 2 or self.computer.choose_gesture == 4:
+                print("#" * 20)
+                print (f"{self.player_one.name} has won this round.")
+                print("#" * 20)
+                self.player_one.score += 1
 
             elif self.player_one.current_gesture == 4 and self.computer.current_gesture == 2 or self.computer.choose_gesture == 5:
+                print("#" * 20)
                 print (f"{self.player_one.name} has won this round.")
+                print("#" * 20)
                 self.player_one.score += 1
 
             elif self.player_one.current_gesture == 5 and self.computer.current_gesture == 1 or self.computer.choose_gesture == 3:
+                print("#" * 20)
                 print (f"{self.player_one.name} has won this round.")
                 self.player_one.score += 1
 
             else:
                 print (f"{self.computer.name} has won this round.")
                 self.computer.score += 1
-
-
-    def score_total(self):
-        while True:
-            if (self.player_one.score != 3) or (self.computer.score != 3):
-                g.battle()
-                print (f"{self.player_one.name} score = {self.player_one.score}")
-                print (f"{self.computer.name} score = {self.computer.score}")
-                print(type(self.player_one.score))
-            else:
+                
+            print (f"{self.player_one.name} score = {self.player_one.score}")
+            print (f"{self.computer.name} score = {self.computer.score}")
+            if self.player_one.score == 3:
+                print(f"{self.player_one.name} is the winner")
                 break
+            else:
+                if self.computer.score == 3:
+                    print(f"{self.player_one.name} is the winner")
+                    break
+                
+
+    # def score_total(self):
+    #     while True:
+
+    #             self.battle()
+    #         else:
+    #             break
 
             
 
@@ -101,9 +115,8 @@ g = Game()
 # g.greet_user()
 # g.game_rules()
 g.creat_player()
-
 g.battle()
-g.score_total()
+
 
 
 
