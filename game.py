@@ -38,6 +38,10 @@ class Game:
         print("-----------------------------------------------------------")
         print("-----------------------------------------------------------")
 
+
+    def n_of_players(self):
+        ...
+
     def creat_player(self):
         # number_of_player = int(input(("How many players will we have today?\n1 ~ 2 or 3 for a surprise  ")))
         # if number_of_player == 1:
@@ -47,9 +51,9 @@ class Game:
                 raise ValueError ("Missing name")
             self.player_one = Human(name)
             self.computer = Computer()
-            
+
+
     def battle(self):
-            
             self.player_one.choose_gesture()
             self.computer.choose_gesture()
 
@@ -85,34 +89,7 @@ class Game:
                
 
 
-def main():
-    g = Game()
-    g.greet_user()
-    time.sleep(3)
-    g.game_rules()
-    g.creat_player()
-    time.sleep(1.5) 
-    while True:
-        g.battle()
-        time.sleep(2)
-        print ("\n" * 1)
-        print (f"{g.player_one.name} score = {g.player_one.score}")
-        print (f"{g.computer.name} score = {g.computer.score}")
-        print ("\n" * 1)
-        if g.player_one.score == 3:
-            print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-            print(f"{g.player_one.name} is the winner!!!!!!!!!!")
-            print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
-            break
-        else:
-            if g.computer.score == 3:
-                    print("~~~~~~~~~~~~~~~~~~~~~~~")
-                    print(f"{g.computer.name} is the winner!!!!!!!")
-                    print("~~~~~~~~~~~~~~~~~~~~~~~\n")
-                    break
 
-
-main() 
 
 
 
