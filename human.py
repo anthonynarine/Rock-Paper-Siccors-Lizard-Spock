@@ -3,13 +3,15 @@ from player import Player
 
 class Human(Player):
     def __init__(self,name):
-        super().__init__()
+        super().__init__(name)
         self.name = name
 
     def choose_gesture(self):
-        print("#######################################")
+ 
         self.current_gesture = int(input (f"Select your weapon of choice {self.name}:\n[1] for Rock.\n[2] for Paper.\n[3] for Scissors.\n[4] for lizard.\n[5] for spock. \n"))      
-        if self.current_gesture == 1:
+        if self.current_gesture not in [1,2,3,4,5]:
+            raise ValueError ("Invalid entry")
+        elif self.current_gesture == 1:
             print (f"You have selected {self.gesture_option[0]}")
         elif self.current_gesture == 2:
             print (f"You have selected {self.gesture_option[1]}")

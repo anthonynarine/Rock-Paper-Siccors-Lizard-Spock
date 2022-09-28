@@ -3,9 +3,6 @@ from random import randint
 
 
 class Computer(Player):
-    def __init__(self,name = "Ai"):
-        super().__init__()
-        self.name = name
 
     def choose_gesture(self):
         self.current_gesture = randint(1,5) 
