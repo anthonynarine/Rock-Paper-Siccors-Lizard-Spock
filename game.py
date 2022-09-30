@@ -8,10 +8,7 @@ import time
 class Game:
    
     def __init__(self):
-        self.player_one = None
-        self.player_two = None
-        self.computer = None
-
+        ...
         
     def greet_user(self):
         print("----------------------------------------------------------")
@@ -25,7 +22,6 @@ class Game:
 
 
     def game_rules(self):
-
         print("----------------------------------------------------------")
         print("----------------------------------------------------------")
         print("The game rules are as follows:")
@@ -41,11 +37,11 @@ class Game:
 
     def n_of_players(self):
         ...
-
-    def creat_player(self):
         # number_of_player = int(input(("How many players will we have today?\n1 ~ 2 or 3 for a surprise  ")))
         # if number_of_player == 1:
-            print("\n" * 100)
+
+    def creat_player(self):
+            print("\n" * 10)
             name = input ("Enter your name player: ")
             if not name:
                 raise ValueError ("Missing name")

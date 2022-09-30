@@ -11,20 +11,21 @@ import random
 
 
 def main():
-    g = Game()
-    g.greet_user()
-    time.sleep(3)
+    g = Game()       # Welcomes users
+    g.greet_user()   # Greets users
+    time.sleep(1)    # stalls so users can read rules
     g.game_rules()
-    g.creat_player()
+    time.sleep(1.5)    # stalls so users can read rules
+    g.creat_player() # create player
     time.sleep(1.5) 
-    while True:
+    while True:      #loop battle phasse
         g.battle()
-        time.sleep(2)
+        time.sleep(1.5)
         print ("\n" * 1)
-        print (f"{g.player_one.name} score = {g.player_one.score}")
+        print (f"{g.player_one.name} score = {g.player_one.score}") #print score to terminal
         print (f"{g.computer.name} score = {g.computer.score}")
         print ("\n" * 1)
-        if g.player_one.score == 3:
+        if g.player_one.score == 3:  # first to 3 wins
             print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
             print(f"{g.player_one.name} is the winner!!!!!!!!!!")
             print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
@@ -35,6 +36,5 @@ def main():
                     print(f"{g.computer.name} is the winner!!!!!!!")
                     print("~~~~~~~~~~~~~~~~~~~~~~~\n")
                     break
-
 
 main() 
